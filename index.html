@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXXXXX Imobiliária - Encontre seu imóvel dos sonhos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky-header">
+        <div class="header-container container">
+            <div class="logo">
+                <span class="logo-icon">XXXXX</span>
+                <span class="logo-text">XXXXXXX IMOBILIÁRIA</span>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Comprar</a></li>
+                    <li><a href="#">Institucional</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="#">Área do cliente <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Área do locatário</a></li>
+                            <li><a href="#">Área do proprietário</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="contact-tooltip-container">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-tooltip">
+                    <span class="tooltip-title">Matriz</span>
+                    <span class="tooltip-phone">(74) XXXXXX-XXXXXXX</span>
+                </div>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1>Encontre o seu imóvel dos sonhos!</h1>
+            <p class="subtitle">Imóveis para o seu melhor bem-estar e satisfação.</p>
+            
+            <div class="search-container">
+                <div class="search-field">
+                    <select>
+                        <option value="">Comprar</option>
+                        <option value="alugar">Alugar</option>
+                    </select>
+                </div>
+                
+                <div class="search-field">
+                    <select>
+                        <option value="">Todos os imóveis</option>
+                        <option value="casa">Casas</option>
+                        <option value="apartamento">Apartamentos</option>
+                        <option value="terreno">Terrenos</option>
+                        <option value="comercial">Comercial</option>
+                    </select>
+                </div>
+                
+                <div class="search-field">
+                    <input type="text" placeholder="Digite ruas, bairros ou cidades">
+                </div>
+                
+                <button class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <a href="#" class="search-by-code">Buscar por código</a>
+        </div>
+    </section>
+
+    <!-- Property Listing Section -->
+    <section class="property-listing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Imóveis para comprar</h2>
+                <a href="#" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="property-carousel">
+                <!-- Card 1 -->
+                <div class="property-card">
+                    <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                        <span class="exclusive-tag">Exclusivo</span>
+                        <button class="favorite-button"><i class="far fa-heart"></i></button>
+                    </div>
+                    
+                    <div class="property-details">
+                        <span class="property-type">Casa de Condomínio</span>
+                        <h3 class="property-location">Pedra do Lord</h3>
+                        <span class="property-city">Juazeiro - BA</span>
+                        
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 250m²</span>
+                            <span><i class="fas fa-bed"></i> 3 quartos</span>
+                            <span><i class="fas fa-bath"></i> 4 banheiros</span>
+                            <span><i class="fas fa-car"></i> 2 vagas</span>
+                        </div>
+                        
+                        <div class="property-price">
+                            <span>Comprar</span>
+                            <span class="price">R$ 850.000</span>
+                        </div>
+                        
+                        <span class="property-code">Cód. 12345</span>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="property-card">
+                    <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                        <button class="favorite-button"><i class="far fa-heart"></i></button>
+                    </div>
+                    
+                    <div class="property-details">
+                        <span class="property-type">Apartamento</span>
+                        <h3 class="property-location">São Geraldo</h3>
+                        <span class="property-city">Juazeiro - BA</span>
+                        
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 120m²</span>
+                            <span><i class="fas fa-bed"></i> 2 quartos</span>
+                            <span><i class="fas fa-bath"></i> 2 banheiros</span>
+                            <span><i class="fas fa-car"></i> 1 vaga</span>
+                        </div>
+                        
+                        <div class="property-price">
+                            <span>Comprar</span>
+                            <span class="price">R$ 450.000</span>
+                        </div>
+                        
+                        <span class="property-code">Cód. 12346</span>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="property-card">
+                    <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                        <span class="exclusive-tag">Exclusivo</span>
+                        <button class="favorite-button"><i class="far fa-heart"></i></button>
+                    </div>
+                    
+                    <div class="property-details">
+                        <span class="property-type">Casa</span>
+                        <h3 class="property-location">Alto da Maravilha</h3>
+                        <span class="property-city">Juazeiro - BA</span>
+                        
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 180m²</span>
+                            <span><i class="fas fa-bed"></i> 3 quartos</span>
+                            <span><i class="fas fa-bath"></i> 2 banheiros</span>
+                            <span><i class="fas fa-car"></i> 2 vagas</span>
+                        </div>
+                        
+                        <div class="property-price">
+                            <span>Comprar</span>
+                            <span class="price">R$ 620.000</span>
+                        </div>
+                        
+                        <span class="property-code">Cód. 12347</span>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="property-card">
+                    <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')">
+                        <button class="favorite-button"><i class="far fa-heart"></i></button>
+                    </div>
+                    
+                    <div class="property-details">
+                        <span class="property-type">Terreno</span>
+                        <h3 class="property-location">Mangabeira</h3>
+                        <span class="property-city">Juazeiro - BA</span>
+                        
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 500m²</span>
+                        </div>
+                        
+                        <div class="property-price">
+                            <span>Comprar</span>
+                            <span class="price">R$ 350.000</span>
+                        </div>
+                        
+                        <span class="property-code">Cód. 12348</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="map-background"></div>
+        
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                
+                <h3>Matriz</h3>
+                
+                <div class="contact-info">
+                    <p>Av. XXXXXXXXXX, 0000, XXXXXXXXXXXXXXXXX<br>
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
+                    Juazeiro - Bahia</p>
+                    
+                    <p class="business-hours">
+                        <strong>Horário de funcionamento:</strong><br>
+                        De segunda a sexta de 08:00h às 18:00h
+                    </p>
+                    
+                    <p class="phone-number">
+                        <i class="fas fa-phone-alt"></i> (74) XXXXXXXXXXXXXXXXXXXXXXX
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <span class="logo-icon">A</span>
+                    <span class="logo-text">XXXXXXXX IMOBILIÁRIA</span>
+                </div>
+                
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#">Imóveis</a></li>
+                            <li><a href="#">Comprar</a></li>
+                            <li><a href="#">Institucional</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Área do Cliente</h4>
+                        <ul>
+                            <li><a href="#">Área do cliente</a></li>
+                            <li><a href="#">Área do locatário</a></li>
+                            <li><a href="#">Área do proprietário</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="#">Solicitar imóveis</a></li>
+                            <li><a href="#">Cadastre seu imóvel</a></li>
+                            <li><a href="#">Trabalhe conosco</a></li>
+                            <li><a href="#">Solicitar reparo de locação</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Política de privacidade</a>
+                    <a href="#">Termos de uso</a>
+                </div>
+                
+                <div class="copyright">
+                    © 2025 XXXXXXX Imobiliária. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

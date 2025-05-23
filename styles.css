@@ -1,16 +1,32 @@
-/* Global Styles */
+/* 
+ * CSS da Alpha Imobiliária
+ * Estilos globais e componentes para o site da imobiliária
+ * Versão: 2.0
+ * Autor: [Seu Nome]
+ */
+
+/* =============================================
+   VARIÁVEIS GLOBAIS E RESET
+   ============================================= */
+
 :root {
-    --primary-color: #1A1A1A;
-    --secondary-color: #FFFFFF;
-    --accent-color: #F5F5F5;
-    --highlight-color: #FFD700;
-    --gray-dark: #333333;
-    --gray-light: #E0E0E0;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    /* Cores principais */
+    --primary-color: #1A1A1A;       /* Preto/Cinza escuro - textos e elementos principais */
+    --secondary-color: #FFFFFF;     /* Branco - fundos */
+    --accent-color: #F5F5F5;        /* Cinza claro - fundos secundários */
+    --highlight-color: #FFD700;     /* Amarelo/Dourado - destaques */
+    --gray-dark: #333333;           /* Cinza escuro - textos secundários */
+    --gray-light: #E0E0E0;          /* Cinza claro - bordas e divisórias */
+    
+    /* Espaçamentos e bordas */
+    --border-radius: 8px;           /* Raio padrão para bordas arredondadas */
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+    
+    /* Transições */
+    --transition: all 0.3s ease;    /* Transição suave para hovers e animações */
 }
 
+/* Reset básico para garantir consistência entre navegadores */
 * {
     margin: 0;
     padding: 0;
@@ -18,42 +34,52 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; /* Fonte moderna e legível */
     color: var(--primary-color);
-    line-height: 1.6;
+    line-height: 1.6;               /* Espaçamento entre linhas */
     background-color: var(--secondary-color);
 }
 
+/* Estilos para links */
 a {
     text-decoration: none;
-    color: inherit;
+    color: inherit;                 /* Herda a cor do elemento pai */
 }
 
+/* Remove marcadores de lista */
 ul {
     list-style: none;
 }
 
+/* Garante que imagens sejam responsivas */
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* Container principal para centralização de conteúdo */
 .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px;              /* Largura máxima do conteúdo */
+    margin: 0 auto;                 /* Centraliza na página */
+    padding: 0 20px;                /* Padding lateral para mobile */
 }
 
-/* Header Styles */
+/* =============================================
+   COMPONENTES PRINCIPAIS
+   ============================================= */
+
+/* ----------------------------
+   CABEÇALHO (HEADER)
+   ---------------------------- */
 .sticky-header {
-    position: fixed;
+    position: fixed;                /* Fixa no topo da página */
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--secondary-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    z-index: 1000;
+    z-index: 1000;                  /* Garante que fique acima de outros elementos */
     height: 80px;
     display: flex;
     align-items: center;
@@ -67,6 +93,7 @@ img {
     height: 100%;
 }
 
+/* Logo da imobiliária */
 .logo {
     display: flex;
     align-items: center;
@@ -76,6 +103,7 @@ img {
     color: var(--primary-color);
 }
 
+/* Ícone circular do logo */
 .logo-icon {
     display: flex;
     align-items: center;
@@ -88,6 +116,7 @@ img {
     font-weight: 700;
 }
 
+/* Navegação principal */
 .main-nav ul {
     display: flex;
     gap: 30px;
@@ -99,10 +128,12 @@ img {
     position: relative;
 }
 
+/* Efeito hover nos links */
 .main-nav a:hover {
     color: var(--highlight-color);
 }
 
+/* Linha animada abaixo dos links */
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -118,6 +149,7 @@ img {
     width: 100%;
 }
 
+/* Menu dropdown */
 .dropdown {
     position: relative;
 }
@@ -150,12 +182,9 @@ img {
     background-color: var(--accent-color);
 }
 
-.dropdown-icon {
-    font-size: 0.8rem;
-    margin-left: 5px;
-}
-
-/* Contact Tooltip Styles */
+/* ----------------------------
+   TOOLTIP DE CONTATO
+   ---------------------------- */
 .contact-tooltip-container {
     position: relative;
     display: inline-block;
@@ -180,6 +209,7 @@ img {
     background-color: var(--accent-color);
 }
 
+/* Estilo do tooltip */
 .contact-tooltip {
     position: absolute;
     top: 100%;
@@ -199,6 +229,7 @@ img {
     text-align: center;
 }
 
+/* Triângulo do tooltip */
 .contact-tooltip::before {
     content: '';
     position: absolute;
@@ -221,23 +252,16 @@ img {
     font-weight: 500;
 }
 
+/* Mostra o tooltip no hover */
 .contact-tooltip-container:hover .contact-tooltip {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--primary-color);
-    margin-left: 15px;
-}
-
-/* Hero Section */
+/* ----------------------------
+   SEÇÃO HERO (PRINCIPAL)
+   ---------------------------- */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -246,10 +270,11 @@ img {
     align-items: center;
     justify-content: center;
     background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1544&q=80') no-repeat center center/cover;
-    margin-top: 80px;
+    margin-top: 80px; /* Compensa o header fixo */
     text-align: center;
 }
 
+/* Overlay escuro para melhor legibilidade */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -284,6 +309,7 @@ img {
     margin-right: auto;
 }
 
+/* Barra de busca */
 .search-container {
     display: flex;
     background-color: var(--secondary-color);
@@ -311,7 +337,7 @@ img {
 }
 
 .search-field select {
-    appearance: none;
+    appearance: none; /* Remove estilo padrão do select */
     cursor: pointer;
 }
 
@@ -341,7 +367,9 @@ img {
     color: var(--highlight-color);
 }
 
-/* Property Listing Section */
+/* ----------------------------
+   LISTAGEM DE IMÓVEIS
+   ---------------------------- */
 .property-listing {
     padding: 80px 0;
     position: relative;
@@ -378,9 +406,10 @@ img {
 }
 
 .view-all:hover i {
-    transform: translateX(3px);
+    transform: translateX(3px); /* Efeito de movimento */
 }
 
+/* Carrossel de imóveis */
 .property-carousel {
     display: flex;
     gap: 20px;
@@ -392,10 +421,12 @@ img {
     margin-bottom: 20px;
 }
 
+/* Esconde a barra de rolagem */
 .property-carousel::-webkit-scrollbar {
     display: none;
 }
 
+/* Card de imóvel */
 .property-card {
     flex: 0 0 calc(25% - 15px);
     scroll-snap-align: start;
@@ -419,6 +450,7 @@ img {
     position: relative;
 }
 
+/* Tag "Exclusivo" */
 .exclusive-tag {
     position: absolute;
     top: 10px;
@@ -431,6 +463,7 @@ img {
     border-radius: 4px;
 }
 
+/* Botão de favoritos */
 .favorite-button {
     position: absolute;
     bottom: 10px;
@@ -450,9 +483,10 @@ img {
 
 .favorite-button:hover,
 .favorite-button.active {
-    color: #ff0000;
+    color: #ff0000; /* Vermelho para indicar favoritado */
 }
 
+/* Detalhes do imóvel */
 .property-details {
     padding: 20px;
 }
@@ -477,6 +511,7 @@ img {
     margin-bottom: 15px;
 }
 
+/* Características do imóvel */
 .property-features {
     display: flex;
     flex-wrap: wrap;
@@ -491,6 +526,7 @@ img {
     font-size: 0.9rem;
 }
 
+/* Preço */
 .property-price {
     display: flex;
     justify-content: space-between;
@@ -509,6 +545,7 @@ img {
     color: #999;
 }
 
+/* Controles do carrossel */
 .carousel-controls {
     display: flex;
     justify-content: center;
@@ -536,7 +573,9 @@ img {
     color: var(--primary-color);
 }
 
-/* Contact Section */
+/* ----------------------------
+   SEÇÃO DE CONTATO
+   ---------------------------- */
 .contact-section {
     position: relative;
     padding: 80px 0;
@@ -544,6 +583,7 @@ img {
     text-align: center;
 }
 
+/* Mapa de fundo desfocado */
 .map-background {
     position: absolute;
     top: 0;
@@ -554,6 +594,7 @@ img {
     opacity: 0.1;
 }
 
+/* Card de contato */
 .contact-card {
     position: relative;
     z-index: 1;
@@ -563,12 +604,6 @@ img {
     max-width: 500px;
     margin: 0 auto;
     box-shadow: var(--box-shadow);
-}
-
-.contact-icon {
-    font-size: 2.5rem;
-    color: var(--highlight-color);
-    margin-bottom: 20px;
 }
 
 .contact-card h3 {
@@ -596,7 +631,9 @@ img {
     gap: 10px;
 }
 
-/* Footer */
+/* ----------------------------
+   RODAPÉ
+   ---------------------------- */
 .main-footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -625,6 +662,7 @@ img {
     color: var(--primary-color);
 }
 
+/* Colunas de links */
 .footer-columns {
     display: flex;
     gap: 60px;
@@ -656,6 +694,7 @@ img {
     color: var(--highlight-color);
 }
 
+/* Redes sociais */
 .social-media {
     display: flex;
     gap: 15px;
@@ -677,6 +716,7 @@ img {
     color: var(--primary-color);
 }
 
+/* Rodapé inferior */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px 0;
@@ -706,14 +746,20 @@ img {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive Styles */
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+
+/* Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
     .property-card {
-        flex: 0 0 calc(33.333% - 14px);
+        flex: 0 0 calc(33.333% - 14px); /* 3 cards por linha */
     }
 }
 
+/* Tablet Pequeno (até 768px) */
 @media (max-width: 768px) {
+    /* Menu mobile */
     .main-nav {
         position: fixed;
         top: 80px;
@@ -736,6 +782,7 @@ img {
         gap: 15px;
     }
 
+    /* Ajuste do dropdown para mobile */
     .dropdown-menu {
         position: static;
         box-shadow: none;
@@ -749,26 +796,27 @@ img {
         display: block;
     }
 
+    /* Mostra botão do menu mobile */
     .mobile-menu-btn {
         display: block;
     }
 
-    .contact-tooltip-container {
-        margin-left: 0;
-    }
-
+    /* Ajustes no hero */
     .hero-content h1 {
         font-size: 2.2rem;
     }
 
+    /* Barra de busca em coluna */
     .search-container {
         flex-direction: column;
     }
 
+    /* 2 cards por linha */
     .property-card {
         flex: 0 0 calc(50% - 10px);
     }
 
+    /* Rodapé em coluna */
     .footer-container {
         flex-direction: column;
     }
@@ -778,6 +826,7 @@ img {
     }
 }
 
+/* Mobile (até 480px) */
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.8rem;
@@ -787,10 +836,12 @@ img {
         font-size: 1rem;
     }
 
+    /* 1 card por linha */
     .property-card {
         flex: 0 0 100%;
     }
 
+    /* Ajuste no card de contato */
     .contact-card {
         padding: 30px 20px;
     }
